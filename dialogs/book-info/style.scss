@@ -1,0 +1,159 @@
+.dialog#book-info {
+  .dialog-contents {
+    width: 540px;
+    height: 700px;
+  }
+
+  .body {
+    display: flex;
+
+    @media (max-width: 414px) {
+      display: block;
+    }
+  }
+
+  .column.book-info {
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+
+    .app-button + .app-button {
+      margin-top: 0.7em;
+    }
+
+    @media (max-width: 414px) {
+      text-align: center;
+      margin-bottom: 1em;
+      
+      .book-3d {
+        width: 100px;
+      }
+
+      .app-button {
+        max-width: 100px;
+        display: inline-block;
+
+        & + .app-button {
+          margin-top: 0;
+          margin-left: 0.7em;
+        }
+      }
+    }
+  }
+
+  .column.toc {
+    flex: 1;
+    font-size: 0.95em;
+
+    .item {
+      padding: 0.7em;
+
+      &.top {
+        font-weight: bold;
+      }
+
+      &:not(.top) {
+        padding-left: 1.6em;
+      }
+    }
+  }
+
+  .app-button {
+    text-align: center;
+    padding: 0.6em 1em;
+    border-radius: 2px;
+    
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    
+    &.accent {
+      background: #4a77bb;
+      color: white;
+    }
+
+    &.white {
+      background: white;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+
+  .text {
+    margin: 1em 0 0.5em;
+
+    * {
+      font-weight: bold;
+    }
+
+    .title {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .author, .publisher {
+      color: rgba(0, 0, 0, 0.54);
+
+      &:not(:first-child) {
+        margin-top: 0.2em;
+      }
+    }
+  }
+
+  .book-3d {
+    width: 120px;
+    margin-right: 12px !important;
+  }
+
+  /* Fallback styles */
+  .book-3d {
+    display: inline-block;
+    box-shadow: 5px 5px 20px #333;
+    margin: 10px;
+  }
+
+  .book-3d img { 
+    vertical-align: middle;
+    border-radius: 1px;
+  }
+
+  .book-3d {
+    position: relative;
+    -moz-perspective: 100px;
+    -moz-transform: rotateY(-3deg);
+    -webkit-transform: perspective(100) rotateY(-3deg);
+    outline: 1px solid transparent; /* Helps smooth jagged edges in Firefox */
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .book-3d img {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .book-3d:before,
+  .book-3d:after {
+    position: absolute;
+    top: 2%;
+    height: 96%;
+    content: ' ';
+    z-index: -1;
+  }
+
+  .book-3d:before {
+    width: 100%;
+    left: 7.5%;
+    background-color: #565656;
+    box-shadow: 2px 2px 20px #aaa;
+    border-radius: 1px;
+  }
+
+  .book-3d:after {
+    width: 5%;
+    left: 100%;
+    background-color: #EFEFEF;
+    box-shadow: inset 0px 0px 5px #aaa;
+    -moz-transform: rotateY(20deg);
+    -webkit-transform: perspective(100) rotateY(20deg);
+  }
+}

@@ -1,0 +1,62 @@
+.dialog#wiki-search {
+  .dialog-contents {
+    width: 400px;
+    height: 600px;
+  }
+
+  .header {
+    height: 140px;
+
+    .ic-long_arrow_left {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      font-size: 22px;
+    }
+  }
+
+  .body {
+    height: calc(100% - 140px);
+    padding: 0;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .search-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    padding: 0 1em 0.8em;
+
+    .bar {
+      width: 100%;
+      height: 100%;
+      background: white;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      border: solid 1px rgba(0, 0, 0, 0.12);
+
+      display: flex;
+      align-items: center;
+      padding: 0 0.5em;
+      color: rgba(0, 0, 0, 0.54);
+
+      .expand {
+        flex: 1;
+      }
+
+      .language {
+        font-size: 0.7em;
+        font-weight: bold;
+      }
+
+      .ic-dropdown {
+        font-size: 10px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

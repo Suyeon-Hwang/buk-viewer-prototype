@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://static.buk.io/icon-font/buk-icon.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="app">
+    <div class="app-menu top clickable-menu">
+      <div class="button clickable"><a href="/"><i class="ic-menu"></i></a></div>
+      <div class="button clickable"><i class="ic-stacked-book" style="font-size: 38px;"></i></div>
+      <div class="expand"></div>
+      <div class="button clickable"><i class="ic-search"></i></div>
+      <div class="button clickable"><i class="ic-aa"></i></div>
+      <div class="button clickable"><i class="ic-one_page"></i></div>
+      <div class="button clickable" onclick="dialog.activate('bookmark')"><i class="ic-bookmark_page"></i></div>
+    </div>
+    <div class="book">
+      <div class="book-wrapper">
+        <div class="info header clickable-menu">
+          <div class="buttons">
+            <div class="button clickable"><i class="ic-bookmark"></i></div>
+          </div>
+        </div>
+        <div class="contents">
+          <div class="img-container">
+            <img src="page-images/1.jpg" class="left">
+            <img src="page-images/2.jpg" class="right">
+          </div>
+          <div class="pdf-controls">
+            <div class="fab-button mini clickable-menu clickable" onclick="dialog.activate('pdf-thumbnail')">
+              <i class="ic-info"></i>
+            </div>
+            <div class="fab-button mini clickable-menu clickable">
+              <i class="ic-share"></i>
+            </div>
+            <div class="fab-button mini clickable-menu clickable">
+              <i class="ic-plus"></i>
+            </div>
+            <div class="fab-button mini clickable-menu clickable">
+              <i class="ic-minus"></i>
+            </div>
+          </div>
+        </div>
+      <!--   <div class="info footer">
+          <div class="chapter">칼럼 - 책문화 현장에서 | 책이 팔리지 않는 책축제가 무슨 의미인가? / 김상일</div>
+        </div> -->
+        <div class="pager left clickable-menu"><i class="ic-left_arrow"></i></div>
+        <div class="pager right clickable-menu"><i class="ic-right_arrow"></i></div>
+      </div>
+    </div>
+    <div class="fab-button library clickable-menu clickable" onclick="dialog.activate('library')">
+      <i class="ic-library_home"></i>
+    </div>
+  </div>
+  <script src="/dialogs/dialog.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
