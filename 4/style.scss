@@ -139,7 +139,6 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   width: 100%;
   transform-origin: center bottom;
   transition: transform 0.2s linear;
-  overflow: hidden;
 }
 
 .contents {
@@ -176,6 +175,7 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   height: 50px;
   color: rgba(0, 0, 0, 0.54);
   z-index: 10;
+  overflow: hidden;
 
   &.header {
     padding: 0 30px;
