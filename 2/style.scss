@@ -65,6 +65,18 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
       height: 1em;
       margin-left: -0.156em;
     }
+
+    &.ic-bookmark-selected {
+      color: #4a77bb;
+    }
+
+    &.ic-bookmark[bookmarker="true"] {
+      display: none;
+    }
+
+    &.ic-bookmark-selected[bookmarker="false"] {
+      display: none;
+    }
   }
 
   &.top {
@@ -84,14 +96,6 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
     .button + .button {
       margin-left: 0.8em;
     }
-  }
-
-  i.ic-bookmark[bookmarker="true"] {
-    display: none;
-  }
-
-  i.ic-bookmark-selected[bookmarker="false"] {
-    display: none;
   }
 }
 
