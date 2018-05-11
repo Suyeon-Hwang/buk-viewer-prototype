@@ -15,7 +15,7 @@ i {
   font-size: 26px;
 }
 
-[onclick] {
+[onclick], .clickable {
   cursor: pointer;
 }
 
@@ -55,6 +55,30 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
     margin-left: 0.85em;
   }
 
+  i {
+    font-size: 1em;
+
+    &.ic-stacked-book {
+      font-size: 1.4615em;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-left: -0.156em;
+    }
+
+    &.ic-bookmark-selected {
+      color: #4a77bb;
+    }
+
+    &.ic-bookmark[bookmarker="true"] {
+      display: none;
+    }
+
+    &.ic-bookmark-selected[bookmarker="false"] {
+      display: none;
+    }
+  }
+
   &.top {
     top: -80px;
     transition: top 0.2s linear;
@@ -62,9 +86,41 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
 
   @media (max-width: 414px) {
     height: 56px;
+    padding: 0 18px;
+    font-size: 24px;
 
     &.top {
       height: -66px;
+    }
+
+    .button + .button {
+      margin-left: 0.8em;
+    }
+  }
+}
+
+.bookmark-ribbon {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  width: 36px;
+  
+  img {
+    width: 100%;
+    position: relative;
+    transition: top 0.2s linear;
+    top: -60px;
+  }
+
+  &[bookmarker="true"] {
+    img {
+      top: 0;
+    }
+  }
+
+  &[bookmarker="false"]:hover {
+    img {
+      top: -20px;
     }
   }
 }
@@ -123,6 +179,7 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   height: 50px;
   color: rgba(0, 0, 0, 0.54);
   z-index: 10;
+  overflow: hidden;
 
   &.header {
     padding: 0 30px;
@@ -230,6 +287,17 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
     color: #4a77bb;
     font-size: 24px !important;
   }
+
+  @media (max-width: 414px) {
+    .desktop {
+      display: none;
+    }
+  }
+
+
+  @media (min-width: 415px) {
+    right: calc(50% - 140px);
+  }
 }
 
 .fab-button {
@@ -297,6 +365,10 @@ $mat-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
     }
 
     .pager {
+      display: none;
+    }
+
+    .bookmark-ribbon {
       display: none;
     }
 

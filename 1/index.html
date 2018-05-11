@@ -21,13 +21,15 @@
       <div class="button clickable"><i class="ic-aa"></i></div>
       <div class="button clickable"><i class="ic-scroll"></i></div>
       <div class="button clickable" onclick="dialog.activate('bookmark')"><i class="ic-bookmark_page"></i></div>
+      <div class="button clickable"><i class="ic-bookmark" bookmarker="false"></i><i class="ic-bookmark-selected" bookmarker="false"></i></div>
     </div>
     <div class="book">
       <div class="book-wrapper">
         <div class="info header clickable-menu">
-          <div class="bookmark"></div>
-          <div class="title" onclick="dialog.activate('book-info')"><span>A Tale of Two Cities</span> <i class="ic-info"></i></div>
-          <div class="bookmark"><i class="ic-bookmark"></i></div>
+          <div class="title"><span onclick="dialog.activate('book-info')"><span>A Tale of Two Cities</span> <i class="ic-info"></i></span></div>
+          <div class="bookmark-ribbon clickable" bookmarker="false">
+            <img src="./bookmark-ribbon.png">
+          </div>
         </div>
         <div class="contents">
           <iframe scrolling="no"></iframe>

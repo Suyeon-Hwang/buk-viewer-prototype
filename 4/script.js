@@ -2,12 +2,14 @@
   window.dialog.init();
   
   let menuMode = false;
+  let bookmarked = false
 
   const app = $('.app');
   const iframe = $('iframe');
 
   const bookWrapper = $('.book-wrapper');
   const topMenu = $('.app-menu.top');
+  const bookmarkers = $('[bookmarker]');
 
   const leftImg = $('img.left');
   const rightImg = $('img.right');
@@ -28,12 +30,20 @@
     element.bukMenu = true;
   });
 
+  bookmarkers.on('click', () => toggleBookmark());
+
   document.documentElement.addEventListener('click', (event) => {
     if (!event.target.bukMenu) toggleMenuMode();
   });
 
   const fixedWidth = 1075;
   const fixedHeight = 1518;
+
+  const toggleBookmark = () => {
+    bookmarked = !bookmarked;
+
+    bookmarkers.attr('bookmarker', bookmarked);
+  }
 
   const toggleMenuMode = () => {
     menuMode = !menuMode;

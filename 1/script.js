@@ -2,12 +2,14 @@
   window.dialog.init();
   
   let menuMode = false;
+  let bookmarked = false;
 
   let app = $('.app');
   let iframe = $('iframe');
 
   let bookWrapper = $('.book-wrapper');
   let topMenu = $('.app-menu.top');
+  let bookmarkers = $('[bookmarker]');
 
   iframe.on('load', () => {
     iframe[0].contentDocument.addEventListener('click', toggleMenuMode);
@@ -24,9 +26,17 @@
     element.bukMenu = true;
   });
 
+  bookmarkers.on('click', () => toggleBookmark());
+
   document.documentElement.addEventListener('click', (event) => {
     if (!event.target.bukMenu) toggleMenuMode();
   });
+
+  const toggleBookmark = () => {
+    bookmarked = !bookmarked;
+
+    bookmarkers.attr('bookmarker', bookmarked);
+  }
 
   const toggleMenuMode = () => {
     menuMode = !menuMode;

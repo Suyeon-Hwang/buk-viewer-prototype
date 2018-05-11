@@ -18,15 +18,15 @@
       <div class="button clickable"><i class="ic-stacked-book" style="font-size: 38px;"></i></div>
       <div class="expand"></div>
       <div class="button clickable"><i class="ic-search"></i></div>
-      <div class="button clickable"><i class="ic-aa"></i></div>
       <div class="button clickable"><i class="ic-one_page"></i></div>
       <div class="button clickable" onclick="dialog.activate('bookmark')"><i class="ic-bookmark_page"></i></div>
+      <div class="button clickable"><i class="ic-bookmark" bookmarker="false"></i><i class="ic-bookmark-selected" bookmarker="false"></i></div>
     </div>
     <div class="book">
       <div class="book-wrapper">
         <div class="info header clickable-menu">
-          <div class="buttons">
-            <div class="button clickable"><i class="ic-bookmark"></i></div>
+          <div class="bookmark-ribbon clickable" bookmarker="false">
+            <img src="./bookmark-ribbon.png">
           </div>
         </div>
         <div class="contents">
@@ -41,10 +41,13 @@
             <div class="fab-button mini clickable-menu clickable">
               <i class="ic-share"></i>
             </div>
-            <div class="fab-button mini clickable-menu clickable">
+            <div class="fab-button mini clickable-menu clickable desktop">
+              <i class="ic-width_fit"></i>
+            </div>
+            <div class="fab-button mini clickable-menu clickable desktop">
               <i class="ic-plus"></i>
             </div>
-            <div class="fab-button mini clickable-menu clickable">
+            <div class="fab-button mini clickable-menu clickable desktop">
               <i class="ic-minus"></i>
             </div>
           </div>
